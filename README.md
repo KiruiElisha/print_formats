@@ -18,9 +18,17 @@ Print formats for commonly used ERPNext doctypes:
 - Purchase Receipt
 - Sales Quotation
 
-GitHub: https://github.com/KiruiElisha
+Repository: https://github.com/KiruiElisha/print_formats.git
 
+Install (local bench):
 
+```bash
+cd /path/to/bench
+bench get-app https://github.com/KiruiElisha/print_formats.git
+bench --site <site-name> install-app print_formats
+bench --site <site-name> migrate
+bench build
+bench --site <site-name> clear-cache
+```
 
-````
-- ruff
+On Frappe Cloud: add this repo to your project and ensure a post-deploy step runs:
